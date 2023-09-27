@@ -81,4 +81,3 @@ RUN chmod +x /start
 
 
 
-ENTRYPOINT ["/entrypoint"]
