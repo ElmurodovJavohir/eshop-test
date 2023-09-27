@@ -75,6 +75,7 @@ RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 ENV DISPLAY=:99
 
 COPY ./start /start
+COPY ./requirements.txt /requirements.txt
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
 
