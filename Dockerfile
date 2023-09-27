@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   # psycopg2 dependencies
   libpq-dev python-lxml
 
+COPY ./requirements.txt /requirements.txt
 
 # Create Python Dependency and Sub-Dependency Wheels.
 RUN pip wheel --wheel-dir /usr/src/app/wheels  \
@@ -75,7 +76,6 @@ RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 ENV DISPLAY=:99
 
 COPY ./start /start
-COPY ./requirements.txt /requirements.txt
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
 
