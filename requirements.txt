@@ -9,3 +9,4 @@ django-filter
 gunicorn
 uvicorn
 drf-yasg
+django-cors-headers
