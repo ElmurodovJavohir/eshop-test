@@ -4,4 +4,4 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-/usr/local/bin/gunicorn cire.asgi --bind 0.0.0.0:8011 --chdir=/app -k uvicorn.workers.UvicornWorker
+/usr/local/bin/gunicorn core.asgi --bind 0.0.0.0:8011 --chdir=/app -k uvicorn.workers.UvicornWorker
