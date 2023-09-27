@@ -8,3 +8,4 @@ markdown       # Markdown support for the browsable API.
 django-filter
 gunicorn
 uvicorn
+drf-yasg
