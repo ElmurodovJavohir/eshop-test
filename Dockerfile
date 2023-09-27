@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 
 # Create Python Dependency and Sub-Dependency Wheels.
 RUN pip wheel --wheel-dir /usr/src/app/wheels  \
-  -r ${BUILD_ENVIRONMENT}.txt
+  -r requirements.txt
 
 
 # Python 'run' stage --------------------------------------------------------
