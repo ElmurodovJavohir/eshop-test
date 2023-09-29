@@ -159,4 +159,4 @@ CORS_ALLOW_HEADERS = ["*"]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 HOST = "https://eshop.smartbots.uz"
-HOST = "http://localhost:8000"
+# HOST = "http://localhost:8000"
