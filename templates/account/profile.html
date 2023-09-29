@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load qr_code %}
 
     {% block content %}
 
@@ -11,7 +12,9 @@
           <p><strong>Email:</strong> {{request.user.email}}</p>
           <p><strong>Username:</strong> {{request.user.username}}</p>
           <p><a class="btn btn-primary btn-large" href="{% url 'store:add-address' %}">Add Address »</a> <a class="btn btn-outline-primary btn-large" href="#">My Orders »</a></p>
+          {% qr_from_text qr_code size="M" %}
         </div>
+        
 
 
         <div class="row">

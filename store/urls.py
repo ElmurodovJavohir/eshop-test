@@ -12,10 +12,13 @@ urlpatterns = [
     path('', views.home, name="home"),
     # URL for Cart and Checkout
     path('add-to-cart/', views.add_to_cart, name="add-to-cart"),
+    path('add-to-reservation/', views.add_to_reservation,
+         name="add-to-reservation"),
     path('remove-cart/<int:cart_id>/', views.remove_cart, name="remove-cart"),
     path('plus-cart/<int:cart_id>/', views.plus_cart, name="plus-cart"),
     path('minus-cart/<int:cart_id>/', views.minus_cart, name="minus-cart"),
     path('cart/', views.cart, name="cart"),
+    path('reservation/', views.reservation, name="reservation"),
     path('checkout/', views.checkout, name="checkout"),
     path('orders/', views.orders, name="orders"),
 
@@ -31,6 +34,7 @@ urlpatterns = [
     path('accounts/login/', auth_views.LoginView.as_view(template_name='account/login.html',
          authentication_form=LoginForm), name="login"),
     path('accounts/profile/', views.profile, name="profile"),
+    path('accounts/qrcode/<str:qrcode>/', views.qrcode_login, name="qrcode"),
     path('accounts/add-address/', views.AddressView.as_view(), name="add-address"),
     path('accounts/remove-address/<int:id>/',
          views.remove_address, name="remove-address"),

@@ -55,7 +55,30 @@
                   </form>
 
                 </div>
+                <div class="mt-3 col-sm-5 pr-sm-0">
+                  <div class="border d-flex align-items-center justify-content-between py-1 px-3 bg-white border-white"><span class="small text-uppercase text-gray mr-4 no-select">Quantity</span>
+                    <div class="quantity">
+                      <button class="dec-btn p-0"><i class="fas fa-caret-left"></i></button>
+                      <input name="quantity" class="form-control border-0 shadow-0 p-0" type="text" value="1">
 
+                      <button class="inc-btn p-0"><i class="fas fa-caret-right"></i></button>
+                    </div>
+                    
+                  </div>
+
+                </div>
+
+                <div class=" mt-3 col-sm-3 pl-sm-0">
+                  {% comment %} <a class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0" href="{% url 'store:add-to-cart' %}">Add to cart</a> {% endcomment %}
+                  
+                  <form action="{% url 'store:add-to-reservation' %}">
+                    <input type="date" name="finished_at"  id="finished_at">
+
+                    <input type="hidden" name="prod_id" value="{{product.id}}" id="product_id">
+                    <button type="submit" class="btn btn-dark btn-lg btn-block h-100 d-flex align-items-center justify-content-center px-0">Add to Reservation</button>
+                  </form>
+
+                </div>
               </div><a class="btn btn-link text-dark p-0 mb-4" href="#"><i class="far fa-heart mr-2"></i>Add to wish list</a><br>
               <ul class="list-unstyled small d-inline-block">
                 <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">SKU:</strong><span class="ml-2 text-muted">{{product.sku}}</span></li>
